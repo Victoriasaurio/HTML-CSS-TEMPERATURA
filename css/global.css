@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url('/css/font/Montserrat/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url('/css/font/Montserrat/Montserrat-SemiBold.ttf');
+}
+@font-face {
+    font-family: "Montserrat-Black";
+    src: url('/css/font/Montserrat/Montserrat-Black.ttf');
+}
+
+:root {
+    --MontserratRegular: "Montserrat-Regular";
+    --MontserratSemiBold: "Montserrat-SemiBold";
+    --MontserratBlack: "Montserrat-Black";
+    --YellowPrimary: #E3A322;
+    --OrangeSecondary: #ED8D24;
+    --Orange: #D7642A;
+    --Red: #ED4528;
+    --RedStrawberry: #E3223E;
+}
