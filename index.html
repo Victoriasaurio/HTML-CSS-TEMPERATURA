@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./index.js"></script>
     <title>WEATHER</title>
 </head>
 <body>
@@ -21,15 +23,11 @@
     <nav class="btn_op">
         <a href="#">temperatura</a>
         <a href="#">reloj</a>
-        <a href="#">lista de temperaturas</a>
+        <a href="#" onclick="getAllTemperatures()">lista de temperaturas</a>
     </nav>
 
-    <section class="list_op">
+    <section class="list_op" id="info_listed">
         <h1>Temperaturas consultadas</h1>
-        <ul>
-            <li class="info"><img src="https://img.icons8.com/doodle/30/000000/apple-weather.png"/><h3 class="temp_info">17°C</h3> - Humedad: <h3 class="temp_info">70%</h3></li>
-            <li class="info"><img src="https://img.icons8.com/doodle/30/000000/apple-weather.png"/><h3 class="temp_info">20°C</h3> - Humedad: <h3 class="temp_info">80%</h3></li>
-        </ul>
     </section>
 </body>
 </html>
