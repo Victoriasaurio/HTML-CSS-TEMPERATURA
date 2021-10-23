@@ -84,7 +84,7 @@
 }
 .info {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 .info .temp_info {
     font-size: 14px;

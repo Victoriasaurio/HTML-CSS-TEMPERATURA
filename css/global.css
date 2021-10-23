@@ -5,15 +5,15 @@
 }
 @font-face {
     font-family: "Montserrat-Regular";
-    src: url('/css/font/Montserrat/Montserrat-Regular.ttf');
+    src: url('./font/Montserrat/Montserrat-Regular.ttf');
 }
 @font-face {
     font-family: "Montserrat-SemiBold";
-    src: url('/css/font/Montserrat/Montserrat-SemiBold.ttf');
+    src: url('./font/Montserrat/Montserrat-SemiBold.ttf');
 }
 @font-face {
     font-family: "Montserrat-Black";
-    src: url('/css/font/Montserrat/Montserrat-Black.ttf');
+    src: url('./font/Montserrat/Montserrat-Black.ttf');
 }
 
 :root {
