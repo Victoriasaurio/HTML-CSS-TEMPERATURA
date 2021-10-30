@@ -13,16 +13,17 @@
 <body>
     <header class="container_header">
         <div class="header_op">
-            <h3>Oct 19, 8:00am</h3>
+            <h3 id="date">Fecha:</h3>
             <h2>Yucatán</h2>
-            <h1><img src="https://img.icons8.com/emoji/48/000000/sun-behind-large-cloud.png"/> 18°C</h1>
-            <h3>Humedad: 82%</h3>
+            <h1 id="temp"><img src="https://img.icons8.com/emoji/48/000000/sun-behind-large-cloud.png"/>Temperatura:</h1>
+            <h3 id="humidity">Humedad:</h3>
         </div>
     </header>
 
     <nav class="btn_op">
-        <a href="#">temperatura</a>
-        <a href="#">reloj</a>
+        <a href="#" onclick="getTemperature()">temperatura</a>
+        <a id="btn_activate_rele" href="#" onclick="activateRele()">Activar rele</a>
+        <a id="btn_deactivate_rele" href="#" onclick="deactivateRele()">Desactivar rele</a>
         <a href="#" onclick="getAllTemperatures()">lista de temperaturas</a>
     </nav>
 
