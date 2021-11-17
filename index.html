@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/main.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./index.js"></script>
     <title>WEATHER</title>
 </head>
@@ -30,5 +31,13 @@
     <section class="list_op" id="info_listed">
         <h1>Temperaturas consultadas</h1>
     </section>
+    
+    <div class="btn_op">
+        <a href="#myChart" onclick="createChar()">Graficar</a>
+    </div>
+
+    <div class="container-grafica">
+        <canvas id="myChart"></canvas>
+    </div>
 </body>
 </html>

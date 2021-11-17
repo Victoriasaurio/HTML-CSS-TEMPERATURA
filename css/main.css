@@ -93,3 +93,20 @@
 .info .temp_info {
     font-size: 14px;
 }
+.container-grafica {
+    width: 600px;
+    height: 400px;
+    margin: auto;
+}
+.container-grafica a {
+    margin: auto;
+    text-align: center;
+    border: 1px var(--RedStrawberry) solid;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background: var(--RedStrawberry);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--MontserratRegular);
+}

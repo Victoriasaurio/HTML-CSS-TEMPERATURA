@@ -66,3 +66,53 @@ async function deactivateRele() {
   deactivate_element.style.display = 'none'
   console.log(response)
 }
+
+
+async function createChar() {
+  let temperatures = await axios.get(`http://${server_host}:${server_port}/v1/temperature/data`)
+  let temperature = temperatures.data
+  let temp_array = temperature.slice(temperature.length-6).reverse()
+
+  let temp_data = []
+  let chart_labels = []
+
+  for(data of temp_array) {
+    chart_labels.push('H: '+Math.round(data.Hum)+"%")
+    temp_data.push(data.Temp)
+  }
+
+  const ctx = document.getElementById('myChart').getContext('2d');
+
+  const myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: chart_labels,
+          datasets: [{
+              label: 'Ocultar datos',
+              data: temp_data,
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        },
+        plugins: {
+          title: {
+            display: true,
+            text: 'Temperaturas'
+          }
+        },
+      }
+  });
+}
