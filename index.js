@@ -1,6 +1,7 @@
 const server_port = 3800
 const server_host = 'localhost'
 const element = document.createElement('ul')
+let myChart
 
 async function getAllTemperatures() {
   let temperatures = await axios.get(`http://${server_host}:${server_port}/v1/temperature/data`)
@@ -81,9 +82,17 @@ async function createChar() {
     temp_data.push(data.Temp)
   }
 
-  const ctx = document.getElementById('myChart').getContext('2d');
+  if(myChart) {
+    document.getElementById('myChart').remove()
+    let element_char = document.createElement('id')
+    element_char.innerHTML = `<canvas id="myChart"></canvas>`
+    document.getElementById('char').appendChild(element_char)
+  }
 
-  const myChart = new Chart(ctx, {
+  const ctx = document.getElementById('myChart').getContext('2d')
+
+
+  myChart = new Chart(ctx, {
       type: 'bar',
       data: {
           labels: chart_labels,
